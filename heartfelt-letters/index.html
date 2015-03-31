@@ -50,7 +50,7 @@
       
     <br>
     
-    <form>
+    <form method='post' action='/contact'>
         <div class="form-group">
             <label for="email">Email address</label>
             <input type="email" name="email" class="form-control" id="email" placeholder="Your email">
@@ -70,7 +70,7 @@
             <div class="col-xs-6">
                 <div class="form-group">
                     <label for="recipient_name">Recipient Name</label>
-                    <input name="recipient_name" class="form-control" id="return_name">
+                    <input name="recipient_name" class="form-control" id="recipient_name">
                 </div>
                 <div class="form-group">
                     <label for="recipient_address">Recipient Address</label>
@@ -88,6 +88,7 @@
             <input name="customize" class="form-control" id="customize">
             *Custom instructions for your letter will increase the cost on a case by case basis.
         </div>
+        <button type="submit" class="btn btn-success">Send</button>
     </form>
    
    
