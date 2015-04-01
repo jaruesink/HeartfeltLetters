@@ -23,10 +23,10 @@ if (isset($_POST['return_name']))
         $message->setSubject("HEARTFELT LETTERS CONTACT: ".$return_name);
         $message->setTextBody($message_content);
         $message->send();
-        echo '<a href="/">Thank you, your message has been sent. Please click this message to return to the Heartfelt Website</a>';
+        echo '<a href="/">Thank you, your message has been sent. We will send you an invoice to your email soon. Please click here to return to the Heartfelt Website</a>';
         } catch (InvalidArgumentException $e) {
       // ... 
-          echo '<a href="/">ERROR: EMAIL NOT SENT. Please click this message to return to the Heartfelt Website to try again. </a> <br>';
+          echo '<a href="/">ERROR: EMAIL NOT SENT. Please click this message to return to ThoughtfulLetters.com.</a> <br>';
           echo $e;
     }
 }
