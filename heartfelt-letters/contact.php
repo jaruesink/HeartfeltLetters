@@ -17,8 +17,8 @@ if (isset($_POST['return_name']))
         $customize = $_POST['customize'];
         $message_content ="Email: ".$email."\nReturn Name: ".$return_name."\nReturn Address: ".$return_address."\nRecipient Name:\t".$recipient_name."\nRecipient Address:\t".$recipient_address."\nMessage:\t".$message."\nCustomizations:\t".$customize;
         $message = new Message();
-        $message->setSender("djrobotfreak@gmail.com");
-        $message->addTo("jaruesink@gmail.com");
+        $message->setSender($email);
+        $message->addTo("info@thoughtfulletters.com");
         //$message->addTo("derek.wene@gmail.com");
         $message->setSubject("HEARTFELT LETTERS CONTACT: ".$return_name);
         $message->setTextBody($message_content);
@@ -35,7 +35,7 @@ else
   {
   echo '
   
-    <p>Something weird happened.</p> <script> setTimeout(function(){ window.location.replace("/"); }, 5000);</script>
+    <p>Something weird happened, please try again.</p> <script> setTimeout(function(){ window.location.replace("/"); }, 5000);</script>
     ';
   }
 ?>
